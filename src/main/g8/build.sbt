@@ -4,12 +4,13 @@ organization := "$organization$"
 
 version := "$version$"
 
-scalaVersion := "2.11.7"
+scalaVersion := "2.11.8"
 
 libraryDependencies ++= Seq(
-  "org.scalatest" % "scalatest_2.11" % "2.2.4" % "test" withSources() withJavadoc(),
-  "org.scalacheck" %% "scalacheck" % "1.12.5" % "test" withSources() withJavadoc()
+  "com.lihaoyi" %% "utest" % "0.4.3" % "test" withSources(), withJavadoc(),
 )
+
+testFrameworks += new TestFramework("utest.runner.Framework")
 
 shellPrompt := { state => "$name$> " }
 
