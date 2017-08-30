@@ -4,10 +4,10 @@ organization := "$organization$"
 
 version := "$version$"
 
-scalaVersion := "2.11.8"
+scalaVersion := "2.12.3"
 
 libraryDependencies ++= Seq(
-  "com.lihaoyi" %% "utest" % "0.4.3" % "test"
+  "com.lihaoyi" %% "utest" % "0.4.8" % "test"
 )
 
 testFrameworks += new TestFramework("utest.runner.Framework")
